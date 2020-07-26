@@ -1,45 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Class: Session</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      Session - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
 
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<div id="main">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-    <h1 class="page-title">Class: Session</h1>
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Braintree SDK Client Reference
+    </h3>
 
     
 
+    <h3>Classes</h3><ul><li id="Action-nav"><a href="Action.html">Action</a><ul class='methods'><li data-type="method" id="Action-dumpData-nav"><a href="Action.html#dumpData">dumpData</a></li><li data-type="method" id="Action-setCategories-nav"><a href="Action.html#setCategories">setCategories</a></li><li data-type="method" id="Action-setCustomer-nav"><a href="Action.html#setCustomer">setCustomer</a></li><li data-type="method" id="Action-setCustomFields-nav"><a href="Action.html#setCustomFields">setCustomFields</a></li><li data-type="method" id="Action-setExternalVisitRef-nav"><a href="Action.html#setExternalVisitRef">setExternalVisitRef</a></li><li data-type="method" id="Action-setPageType-nav"><a href="Action.html#setPageType">setPageType</a></li><li data-type="method" id="Action-setPlacements-nav"><a href="Action.html#setPlacements">setPlacements</a></li><li data-type="method" id="Action-setProduct-nav"><a href="Action.html#setProduct">setProduct</a></li><li data-type="method" id="Action-setRef-nav"><a href="Action.html#setRef">setRef</a></li><li data-type="method" id="Action-setRestoreLink-nav"><a href="Action.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="Action-setSearchTerms-nav"><a href="Action.html#setSearchTerms">setSearchTerms</a></li><li data-type="method" id="Action-setTags-nav"><a href="Action.html#setTags">setTags</a></li><li data-type="method" id="Action-setVariation-nav"><a href="Action.html#setVariation">setVariation</a></li></ul></li><li id="ActionResponse-nav"><a href="ActionResponse.html">ActionResponse</a></li><li id="Api-nav"><a href="Api.html">Api</a><ul class='methods'><li data-type="method" id="Api-addSegmentCodeToVisit-nav"><a href="Api.html#addSegmentCodeToVisit">addSegmentCodeToVisit</a></li><li data-type="method" id="Api-createRecommendationRequest-nav"><a href="Api.html#createRecommendationRequest">createRecommendationRequest</a></li><li data-type="method" id="Api-customer-nav"><a href="Api.html#customer">customer</a></li><li data-type="method" id="Api-defaultSession-nav"><a href="Api.html#defaultSession">defaultSession</a></li><li data-type="method" id="Api-listen-nav"><a href="Api.html#listen">listen</a></li><li data-type="method" id="Api-loadRecommendations-nav"><a href="Api.html#loadRecommendations">loadRecommendations</a></li><li data-type="method" id="Api-pageTagging-nav"><a href="Api.html#pageTagging">pageTagging</a></li><li data-type="method" id="Api-recommendedProductAddedToCart-nav"><a href="Api.html#recommendedProductAddedToCart">recommendedProductAddedToCart</a></li><li data-type="method" id="Api-reportAddToCart-nav"><a href="Api.html#reportAddToCart">reportAddToCart</a></li><li data-type="method" id="Api-resendCartContent-nav"><a href="Api.html#resendCartContent">resendCartContent</a></li><li data-type="method" id="Api-resendCartTagging-nav"><a href="Api.html#resendCartTagging">resendCartTagging</a></li><li data-type="method" id="Api-resendCustomerTagging-nav"><a href="Api.html#resendCustomerTagging">resendCustomerTagging</a></li><li data-type="method" id="Api-sendTagging-nav"><a href="Api.html#sendTagging">sendTagging</a></li><li data-type="method" id="Api-setAutoLoad-nav"><a href="Api.html#setAutoLoad">setAutoLoad</a></li><li data-type="method" id="Api-setRecommendationsEnabled-nav"><a href="Api.html#setRecommendationsEnabled">setRecommendationsEnabled</a></li></ul></li><li id="RequestBuilder-nav"><a href="RequestBuilder.html">RequestBuilder</a><ul class='methods'><li data-type="method" id="RequestBuilder-addCurrentCategories-nav"><a href="RequestBuilder.html#addCurrentCategories">addCurrentCategories</a></li><li data-type="method" id="RequestBuilder-addCurrentCategoryIds-nav"><a href="RequestBuilder.html#addCurrentCategoryIds">addCurrentCategoryIds</a></li><li data-type="method" id="RequestBuilder-addCurrentCustomFields-nav"><a href="RequestBuilder.html#addCurrentCustomFields">addCurrentCustomFields</a></li><li data-type="method" id="RequestBuilder-addCurrentTags-nav"><a href="RequestBuilder.html#addCurrentTags">addCurrentTags</a></li><li data-type="method" id="RequestBuilder-addCurrentVariation-nav"><a href="RequestBuilder.html#addCurrentVariation">addCurrentVariation</a></li><li data-type="method" id="RequestBuilder-addCustomer-nav"><a href="RequestBuilder.html#addCustomer">addCustomer</a></li><li data-type="method" id="RequestBuilder-addElements-nav"><a href="RequestBuilder.html#addElements">addElements</a></li><li data-type="method" id="RequestBuilder-addExternalVisitRef-nav"><a href="RequestBuilder.html#addExternalVisitRef">addExternalVisitRef</a></li><li data-type="method" id="RequestBuilder-addOrderData-nav"><a href="RequestBuilder.html#addOrderData">addOrderData</a></li><li data-type="method" id="RequestBuilder-load-nav"><a href="RequestBuilder.html#load">load</a></li><li data-type="method" id="RequestBuilder-setCartContent-nav"><a href="RequestBuilder.html#setCartContent">setCartContent</a></li><li data-type="method" id="RequestBuilder-setCoupon-nav"><a href="RequestBuilder.html#setCoupon">setCoupon</a></li><li data-type="method" id="RequestBuilder-setCurrentPriceFrom-nav"><a href="RequestBuilder.html#setCurrentPriceFrom">setCurrentPriceFrom</a></li><li data-type="method" id="RequestBuilder-setCurrentPriceTo-nav"><a href="RequestBuilder.html#setCurrentPriceTo">setCurrentPriceTo</a></li><li data-type="method" id="RequestBuilder-setCustomer-nav"><a href="RequestBuilder.html#setCustomer">setCustomer</a></li><li data-type="method" id="RequestBuilder-setElements-nav"><a href="RequestBuilder.html#setElements">setElements</a></li><li data-type="method" id="RequestBuilder-setForcedSegments-nav"><a href="RequestBuilder.html#setForcedSegments">setForcedSegments</a></li><li data-type="method" id="RequestBuilder-setPageType-nav"><a href="RequestBuilder.html#setPageType">setPageType</a></li><li data-type="method" id="RequestBuilder-setProducts-nav"><a href="RequestBuilder.html#setProducts">setProducts</a></li><li data-type="method" id="RequestBuilder-setResponseMode-nav"><a href="RequestBuilder.html#setResponseMode">setResponseMode</a></li><li data-type="method" id="RequestBuilder-setRestoreLink-nav"><a href="RequestBuilder.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="RequestBuilder-setSegmentCodes-nav"><a href="RequestBuilder.html#setSegmentCodes">setSegmentCodes</a></li></ul></li><li id="Session-nav"><a href="Session.html">Session</a><ul class='methods'><li data-type="method" id="Session-addOrder-nav"><a href="Session.html#addOrder">addOrder</a></li><li data-type="method" id="Session-reportAddToCart-nav"><a href="Session.html#reportAddToCart">reportAddToCart</a></li><li data-type="method" id="Session-setCart-nav"><a href="Session.html#setCart">setCart</a></li><li data-type="method" id="Session-setCustomer-nav"><a href="Session.html#setCustomer">setCustomer</a></li><li data-type="method" id="Session-setExternalVisitRef-nav"><a href="Session.html#setExternalVisitRef">setExternalVisitRef</a></li><li data-type="method" id="Session-setResponseMode-nav"><a href="Session.html#setResponseMode">setResponseMode</a></li><li data-type="method" id="Session-setRestoreLink-nav"><a href="Session.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="Session-setVariation-nav"><a href="Session.html#setVariation">setVariation</a></li><li data-type="method" id="Session-viewCart-nav"><a href="Session.html#viewCart">viewCart</a></li><li data-type="method" id="Session-viewCategory-nav"><a href="Session.html#viewCategory">viewCategory</a></li><li data-type="method" id="Session-viewFrontPage-nav"><a href="Session.html#viewFrontPage">viewFrontPage</a></li><li data-type="method" id="Session-viewNotFound-nav"><a href="Session.html#viewNotFound">viewNotFound</a></li><li data-type="method" id="Session-viewOther-nav"><a href="Session.html#viewOther">viewOther</a></li><li data-type="method" id="Session-viewProduct-nav"><a href="Session.html#viewProduct">viewProduct</a></li><li data-type="method" id="Session-viewSearch-nav"><a href="Session.html#viewSearch">viewSearch</a></li><li data-type="method" id="Session-viewTag-nav"><a href="Session.html#viewTag">viewTag</a></li></ul></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#nostojs">nostojs</a></li></ul>
+  </nav>
 
+  <div id="main">
+    
+      <h1 class="page-title">
+        Session
+      </h1>
+    
 
+    
 
 <section>
-
-<header>
+  <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Session</h2>
+      <h2>
         
-    
-</header>
+        Session
+        
+      </h2>
 
-<article>
+      
+    
+  </header>
+
+  <article>
     <div class="container-overview">
-    
+      
         
 
 
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#Session">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="Session">
+      <span class="type-signature"></span>new Session<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
 
 
 
@@ -54,37 +132,37 @@
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -100,66 +178,7 @@
 
 
 
-
-
-
-
-
-    <h5>Examples</h5>
-    
-    <pre class="prettyprint"><code>nostojs(function(api) {
-  let session = api.defaultSession()
-   .setVariation("USD")
-   .setCustomer(customer)</code></pre>
-
-    <pre class="prettyprint"><code>In order to view a product
-  session.viewProduct("123")
-    .setPlacements(["product1"])
-    .load()</code></pre>
-
-    <pre class="prettyprint"><code>In order to view a product with attribution
- session.viewProduct("123")
-     .setRef("123", "example_reco_id")
-     .load()</code></pre>
-
-    <pre class="prettyprint"><code>session.viewProduct({product_id: "123"})
-    .setPlacements(["product1"])
-    .load()</code></pre>
-
-    <pre class="prettyprint"><code>// view product under category
- session.viewProduct("123")
-    .setCategories(["/men/trousers"])
-    .setPlacements(["product1"])
-    .load()</code></pre>
-
-    <pre class="prettyprint"><code>// view category
- session.viewCategory("/men/trousers")
-   .setPlacements(["category123"])
-   .load()</code></pre>
-
-    <pre class="prettyprint"><code>// view tag
- session.viewTag("offers")
-   .setPlacements(["offers1"])
-   .load()</code></pre>
-
-    <pre class="prettyprint"><code>// add order
- session.addOrder(order)
-   .setPlacements(["order1"])
-   .load()</code></pre>
-
-    <pre class="prettyprint"><code>// set cart data
- session.setCart(cart).newAction()
-   .setPlacements(["cart1", "cart2"])
-   .load()
-});</code></pre>
-
-    <pre class="prettyprint"><code>// report product added to cart
-session.reportAddToCart("123", "reco-slot-1")
-   .load()</code></pre>
-
-
-
-    
+      
     </div>
 
     
@@ -168,40 +187,46 @@ session.reportAddToCart("123", "reco-slot-1")
 
     
 
-    
+     
 
     
 
     
 
     
+      <h3 class="subsection-title">Methods</h3>
 
-    
-        <h3 class="subsection-title">Methods</h3>
-
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id="addOrder"><span class="type-signature"></span>addOrder<span class="signature">(order)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#addOrder">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addOrder">
+      <span class="type-signature"></span>addOrder<span class="signature">(order)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     Create a new action for an order page. This should only be used on order
 confirmation / thank you pages.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
-action in order for the request to be made.*
-</div>
+action in order for the request to be made.
+  </div>
 
 
 
@@ -209,56 +234,59 @@ action in order for the request to be made.*
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>order</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Order
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>order</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Order</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the information about the order that was placed</td>
-        </tr>
+        <td class="description last">
+          the information about the order that was placed
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -266,37 +294,37 @@ action in order for the request to be made.*
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -312,54 +340,34 @@ action in order for the request to be made.*
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#reportAddToCart">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="reportAddToCart">
+      <span class="type-signature"></span>reportAddToCart<span class="signature">(product, element)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="reportAddToCart"><span class="type-signature"></span>reportAddToCart<span class="signature">(product, element)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Creates an action to report that product was added to the shopping cart,
 e.g. from the recommendation slot with "Add to cart" button.
 <p>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-</div>
+  </div>
 
 
 
@@ -367,69 +375,70 @@ action in order for the request to be made.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>product</code></td>
+        
 
-        <tr>
-            
-                <td class="name"><code>product</code></td>
-            
+        <td class="type">
+          
+        </td>
 
-            <td class="type">
-            
-            </td>
+        
 
-            
+        
 
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>element</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+      <tr>
+        
+          <td class="name"><code>element</code></td>
+        
+
+        <td class="type">
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
 </table>
-
 
 
 
@@ -437,37 +446,37 @@ action in order for the request to be made.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -482,55 +491,53 @@ action in order for the request to be made.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#reportAddToCart-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="reportAddToCart-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .reportAddToCart("123", "reco-slot-1")
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setCart">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCart">
+      <span class="type-signature"></span>setCart<span class="signature">(cart)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setCart"><span class="type-signature"></span>setCart<span class="signature">(cart)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the information about the user's current shopping cart. It the user
 does not have any items in his shopping cart, you can pass <code>null<code>.
 Passing <code>null<code> will nullify the user's shopping cart on Nosto's
 end. You must also pass in the shopping cart content in it's entirety as
 partial content are not supported.
-</div>
+  </div>
 
 
 
@@ -538,59 +545,65 @@ partial content are not supported.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>cart</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Cart
+    </span>
+
+    |
+
+    <span class="param-type">
+      null
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>cart</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Cart</span>
-|
+          
+        </td>
 
-<span class="param-type">null</span>
+        
 
+        
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the details of the user's shopping cart contents</td>
-        </tr>
+        <td class="description last">
+          the details of the user's shopping cart contents
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -598,37 +611,37 @@ partial content are not supported.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -643,55 +656,63 @@ partial content are not supported.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setCart-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setCart-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .setCart({
+    items: [
+      product_id: "101",
+      sku_id: "101-S",
+      name: "Shoe",
+      unit_price: 34.99
+      price_currency_code: "EUR"
+    ]
+  })
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the current session
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setCustomer">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCustomer">
+      <span class="type-signature"></span>setCustomer<span class="signature">(customer)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Session.html">Session</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setCustomer"><span class="type-signature"></span>setCustomer<span class="signature">(customer)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the information about the currently logged in customer. If the current
 customer is not provided, you will not be able to leverage features such as
 triggered emails. While it is recommended to always provide the details of
 the currently logged in customer, it may be omitted if there are concerns
 about privacy or compliance.
-</div>
+  </div>
 
 
 
@@ -699,56 +720,59 @@ about privacy or compliance.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>customer</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Customer
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>customer</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Customer</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the details of the currently logged in customer</td>
-        </tr>
+        <td class="description last">
+          the details of the currently logged in customer
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -756,37 +780,37 @@ about privacy or compliance.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -801,53 +825,59 @@ about privacy or compliance.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setCustomer-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setCustomer-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .setCustomer({
+    first_name: "Mridang",
+    last_name: "Agarwalla",
+    email: "mridang@nosto.com",
+    newsletter: false,
+    customer_reference: "5e3d4a9c-cf58-11ea-87d0-0242ac130003"
+  })
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the current session
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setExternalVisitRef">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setExternalVisitRef">
+      <span class="type-signature"></span>setExternalVisitRef<span class="signature">(ref)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Session.html">Session</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setExternalVisitRef"><span class="type-signature"></span>setExternalVisitRef<span class="signature">(ref)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the external visit reference for the current session. An external visit
 reference is an external identifier provided by you which allows you to
 move the session between domains.
-</div>
+  </div>
 
 
 
@@ -855,56 +885,59 @@ move the session between domains.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>ref</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>ref</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the external reference to the session</td>
-        </tr>
+        <td class="description last">
+          the external reference to the session
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -912,46 +945,60 @@ move the session between domains.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
+  
+    <dt class="important tag-deprecated">Deprecated:</dt>
     
-        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>as this is often implemented incorrectly leading to polluted data</li></ul></dd>
-    
+        <dd>
+          <ul class="dummy">
+            <li>
+              as this is often implemented incorrectly leading to polluted data
+            </li>
+          </ul>
+        </dd>
+      
+    <br>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-todo">To Do:</dt>
     <dd class="tag-todo">
-        <ul>
-            <li>expand article on how external visit references should be used</li>
-        </ul>
+      <ul>
+        
+          <li>
+            expand article on how external visit references should be used
+          </li>
+        
+      </ul>
     </dd>
-    
+  
 </dl>
 
 
@@ -966,49 +1013,49 @@ move the session between domains.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setExternalVisitRef-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setExternalVisitRef-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .setExternalVisitRef("6bdb69d5-ed15-4d92-a851-e2fa6e8364d9")
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the current session
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setResponseMode">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setResponseMode">
+      <span class="type-signature"></span>setResponseMode<span class="signature">(mode)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Session.html">Session</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setResponseMode"><span class="type-signature"></span>setResponseMode<span class="signature">(mode)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the response type to HTML or JSON_ORIGINAL. This denotes the preferred
 response type of the recommendation result.
 If you would like to access the raw recommendation data in <code>JSON</code> form, specify
@@ -1016,7 +1063,7 @@ If you would like to access the raw recommendation data in <code>JSON</code> for
 If you require a more simplified approach, specify <code>HTML</code>. When you specify
 <code>HTML</code>, you get back HTML blobs, that you may simply inject into
 you placements.
-</div>
+  </div>
 
 
 
@@ -1024,56 +1071,59 @@ you placements.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>mode</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the response mode for the recommendation data</td>
-        </tr>
+        <td class="description last">
+          the response mode for the recommendation data
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1081,37 +1131,37 @@ you placements.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1126,56 +1176,56 @@ you placements.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setResponseMode-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setResponseMode-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .setResponseMode("HTML")
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the current session
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setRestoreLink">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setRestoreLink">
+      <span class="type-signature"></span>setRestoreLink<span class="signature">(restoreLink)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Session.html">Session</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setRestoreLink"><span class="type-signature"></span>setRestoreLink<span class="signature">(restoreLink)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the restore link for the current session. Restore links can be leveraged
 in email campaigns. Restore links allow the the user to restore the cart
 contents in a single click.
-<p/>
+<br/><br/>
 Read more about
 <a href="https://help.nosto.com/en/articles/664692">how to leverage the restore cart link</a>
-</div>
+  </div>
 
 
 
@@ -1183,56 +1233,59 @@ Read more about
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>restoreLink</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>restoreLink</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the secure URL to restore the user's current session</td>
-        </tr>
+        <td class="description last">
+          the secure URL to restore the user's current session
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1240,37 +1293,37 @@ Read more about
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1285,53 +1338,53 @@ Read more about
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setRestoreLink-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setRestoreLink-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .setRestoreLink("https://jeans.com/session/restore?sid=6bdb69d5-ed15-4d92")
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the current session
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setVariation">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setVariation">
+      <span class="type-signature"></span>setVariation<span class="signature">(variation)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Session.html">Session</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setVariation"><span class="type-signature"></span>setVariation<span class="signature">(variation)</span><span class="type-signature"> &rarr; {<a href="Session.html">Session</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the current variation identifier for the session. A variation identifier
 identifies the current currency (or the current customer group). If your site
 uses multi-currency, you must provide the ISO code current currency being viewed.
-</div>
+  </div>
 
 
 
@@ -1339,56 +1392,59 @@ uses multi-currency, you must provide the ISO code current currency being viewed
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>variation</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>variation</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the case-sensitive identifier of the current variation</td>
-        </tr>
+        <td class="description last">
+          the case-sensitive identifier of the current variation
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1396,37 +1452,37 @@ uses multi-currency, you must provide the ISO code current currency being viewed
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1441,62 +1497,59 @@ uses multi-currency, you must provide the ISO code current currency being viewed
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setVariation-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setVariation-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .setVariation("GBP")
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the current session
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewCart">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewCart">
+      <span class="type-signature"></span>viewCart<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Session.html">Session</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewCart"><span class="type-signature"></span>viewCart<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a cart page. This should be used on all cart and
 checkout pages. If your site has a multi-step checkout, it is recommended
 that you send this event on each checkout page.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-</div>
-
-
-
+  </div>
 
 
 
@@ -1509,37 +1562,37 @@ from the action.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1554,58 +1607,57 @@ from the action.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewCart-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewCart-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewCart()
+  .setPlacements(["free-shipper"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewCategory">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewCategory">
+      <span class="type-signature"></span>viewCategory<span class="signature">(categories)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewCategory"><span class="type-signature"></span>viewCategory<span class="signature">(categories)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a category page. This should be used on all
 category, collection of brand pages.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-</div>
+  </div>
 
 
 
@@ -1613,89 +1665,88 @@ from the action.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>categories</code></td>
+        
 
-        <tr>
-            
-                <td class="name"><code>categories</code></td>
-            
+        <td class="type">
+          
+        </td>
 
-            <td class="type">
-            
-            </td>
+        
 
-            
+        
 
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1710,61 +1761,57 @@ from the action.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewCategory-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewCategory-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewCategory("/men/shoes")
+  .setPlacements(["category123"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewFrontPage">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewFrontPage">
+      <span class="type-signature"></span>viewFrontPage<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewFrontPage"><span class="type-signature"></span>viewFrontPage<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a front page. This should be used when the user
 visits the home page.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-</div>
-
-
-
+  </div>
 
 
 
@@ -1777,37 +1824,37 @@ from the action.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1822,61 +1869,57 @@ from the action.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewFrontPage-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewFrontPage-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewFrontPage()
+  .setPlacements(["best-seller"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewNotFound">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewNotFound">
+      <span class="type-signature"></span>viewNotFound<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewNotFound"><span class="type-signature"></span>viewNotFound<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a not found page. This should be used only on 404
 pages.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-</div>
-
-
-
+  </div>
 
 
 
@@ -1889,37 +1932,37 @@ from the action.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1934,63 +1977,59 @@ from the action.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewNotFound-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewNotFound-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewNotFound()
+  .setPlacements(["best-seller"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewOther">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewOther">
+      <span class="type-signature"></span>viewOther<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewOther"><span class="type-signature"></span>viewOther<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a general page. This should be used only on
 pages that don't have a corresponding action. For example, if the user
 is viewing a page such as a "Contact Us" page, you should use the viewOther
 action.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-</div>
-
-
-
+  </div>
 
 
 
@@ -2003,37 +2042,37 @@ from the action.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2048,58 +2087,56 @@ from the action.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewOther-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewOther-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewOther()
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewProduct">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewProduct">
+      <span class="type-signature"></span>viewProduct<span class="signature">(product)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewProduct"><span class="type-signature"></span>viewProduct<span class="signature">(product)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a product page. This must be used only when a
 product is being viewed.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
-</div>
+  </div>
 
 
 
@@ -2107,89 +2144,88 @@ from the action.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>product</code></td>
+        
 
-        <tr>
-            
-                <td class="name"><code>product</code></td>
-            
+        <td class="type">
+          
+        </td>
 
-            <td class="type">
-            
-            </td>
+        
 
-            
+        
 
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2204,62 +2240,62 @@ from the action.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewProduct-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewProduct-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewProduct("101")
+  .setCategories(["/men/trousers"])
+  .setRef("123", "example_reco_id")
+  .setPlacements(["cross-seller"])
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewSearch">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewSearch">
+      <span class="type-signature"></span>viewSearch<span class="signature">(searchTerms)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewSearch"><span class="type-signature"></span>viewSearch<span class="signature">(searchTerms)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a search page. This should be used only
 on search pages. A search page action requires you to pass the search
 term. For example, if the user search for "black shoes", you must pass
 in "black shoes" and not an encoded version such as "black+shoes".
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
 Search terms are not case-sensitive.
-<p/>
-</div>
+  </div>
 
 
 
@@ -2267,56 +2303,59 @@ Search terms are not case-sensitive.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>searchTerms</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>searchTerms</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the non-encoded search terms</td>
-        </tr>
+        <td class="description last">
+          the non-encoded search terms
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2324,37 +2363,37 @@ Search terms are not case-sensitive.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2369,58 +2408,56 @@ Search terms are not case-sensitive.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#viewSearch-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewSearch-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewSearch("black shoes")
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
-<h5>Returns:</h5>
+  </div>
 
+
+      
         
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#viewTag">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="viewTag">
+      <span class="type-signature"></span>viewTag<span class="signature">(tags)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="viewTag"><span class="type-signature"></span>viewTag<span class="signature">(tags)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Create a new action for a tag page. This should be used only on tag pages.
-<p/>
+<br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
-<p/>
+<br/><br/>
 You do not need to specify the page-type explicitly as it is inferred
 from the action.
 Note: tags are not case-sensitive.
-</div>
+  </div>
 
 
 
@@ -2428,56 +2465,59 @@ Note: tags are not case-sensitive.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>tags</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>tags</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the set of the tags being viewed.</td>
-        </tr>
+        <td class="description last">
+          the set of the tags being viewed.
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2485,39 +2525,49 @@ Note: tags are not case-sensitive.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
+  
+    <dt class="important tag-deprecated">Deprecated:</dt>
     
-        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>as this is an advanced action with a limited a use case</li></ul></dd>
-    
+        <dd>
+          <ul class="dummy">
+            <li>
+              as this is an advanced action with a limited a use case
+            </li>
+          </ul>
+        </dd>
+      
+    <br>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2532,61 +2582,49 @@ Note: tags are not case-sensitive.
 
 
 
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    the action instance to load content or track events.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Action.html">Action</a></span>
-
-
-    </dd>
-</dl>
-
+  <div class="example-container">
+    <a class="link-icon" href="#viewTag-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="viewTag-examples">Example</h5>
     
 
+  <pre class="prettyprint"><code>nostojs(api => api
+  .defaultSession()
+  .viewTag("colourful")
+  .load()
+  .then(data => console.log(data)))</code></pre>
 
 
+  </div>
 
 
-        
+      
     
 
     
 
     
-</article>
-
+  </article>
 </section>
 
 
 
 
-</div>
+  </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Action.html">Action</a></li><li><a href="ActionResponse.html">ActionResponse</a></li><li><a href="Api.html">Api</a></li><li><a href="RequestBuilder.html">RequestBuilder</a></li><li><a href="Session.html">Session</a></li></ul><h3>Global</h3><ul><li><a href="global.html#nostojs">nostojs</a></li></ul>
-</nav>
+  <br class="clear">
 
-<br class="clear">
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a>
+  </footer>
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sun Jul 26 2020 15:14:44 GMT+0300 (Eastern European Summer Time)
-</footer>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+  
+
 </body>
 </html>

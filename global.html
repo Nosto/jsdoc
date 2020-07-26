@@ -1,84 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Global</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      Global - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
 
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<div id="main">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-    <h1 class="page-title">Global</h1>
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Braintree SDK Client Reference
+    </h3>
 
     
 
+    <h3>Classes</h3><ul><li id="Action-nav"><a href="Action.html">Action</a><ul class='methods'><li data-type="method" id="Action-dumpData-nav"><a href="Action.html#dumpData">dumpData</a></li><li data-type="method" id="Action-setCategories-nav"><a href="Action.html#setCategories">setCategories</a></li><li data-type="method" id="Action-setCustomer-nav"><a href="Action.html#setCustomer">setCustomer</a></li><li data-type="method" id="Action-setCustomFields-nav"><a href="Action.html#setCustomFields">setCustomFields</a></li><li data-type="method" id="Action-setExternalVisitRef-nav"><a href="Action.html#setExternalVisitRef">setExternalVisitRef</a></li><li data-type="method" id="Action-setPageType-nav"><a href="Action.html#setPageType">setPageType</a></li><li data-type="method" id="Action-setPlacements-nav"><a href="Action.html#setPlacements">setPlacements</a></li><li data-type="method" id="Action-setProduct-nav"><a href="Action.html#setProduct">setProduct</a></li><li data-type="method" id="Action-setRef-nav"><a href="Action.html#setRef">setRef</a></li><li data-type="method" id="Action-setRestoreLink-nav"><a href="Action.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="Action-setSearchTerms-nav"><a href="Action.html#setSearchTerms">setSearchTerms</a></li><li data-type="method" id="Action-setTags-nav"><a href="Action.html#setTags">setTags</a></li><li data-type="method" id="Action-setVariation-nav"><a href="Action.html#setVariation">setVariation</a></li></ul></li><li id="ActionResponse-nav"><a href="ActionResponse.html">ActionResponse</a></li><li id="Api-nav"><a href="Api.html">Api</a><ul class='methods'><li data-type="method" id="Api-addSegmentCodeToVisit-nav"><a href="Api.html#addSegmentCodeToVisit">addSegmentCodeToVisit</a></li><li data-type="method" id="Api-createRecommendationRequest-nav"><a href="Api.html#createRecommendationRequest">createRecommendationRequest</a></li><li data-type="method" id="Api-customer-nav"><a href="Api.html#customer">customer</a></li><li data-type="method" id="Api-defaultSession-nav"><a href="Api.html#defaultSession">defaultSession</a></li><li data-type="method" id="Api-listen-nav"><a href="Api.html#listen">listen</a></li><li data-type="method" id="Api-loadRecommendations-nav"><a href="Api.html#loadRecommendations">loadRecommendations</a></li><li data-type="method" id="Api-pageTagging-nav"><a href="Api.html#pageTagging">pageTagging</a></li><li data-type="method" id="Api-recommendedProductAddedToCart-nav"><a href="Api.html#recommendedProductAddedToCart">recommendedProductAddedToCart</a></li><li data-type="method" id="Api-reportAddToCart-nav"><a href="Api.html#reportAddToCart">reportAddToCart</a></li><li data-type="method" id="Api-resendCartContent-nav"><a href="Api.html#resendCartContent">resendCartContent</a></li><li data-type="method" id="Api-resendCartTagging-nav"><a href="Api.html#resendCartTagging">resendCartTagging</a></li><li data-type="method" id="Api-resendCustomerTagging-nav"><a href="Api.html#resendCustomerTagging">resendCustomerTagging</a></li><li data-type="method" id="Api-sendTagging-nav"><a href="Api.html#sendTagging">sendTagging</a></li><li data-type="method" id="Api-setAutoLoad-nav"><a href="Api.html#setAutoLoad">setAutoLoad</a></li><li data-type="method" id="Api-setRecommendationsEnabled-nav"><a href="Api.html#setRecommendationsEnabled">setRecommendationsEnabled</a></li></ul></li><li id="RequestBuilder-nav"><a href="RequestBuilder.html">RequestBuilder</a><ul class='methods'><li data-type="method" id="RequestBuilder-addCurrentCategories-nav"><a href="RequestBuilder.html#addCurrentCategories">addCurrentCategories</a></li><li data-type="method" id="RequestBuilder-addCurrentCategoryIds-nav"><a href="RequestBuilder.html#addCurrentCategoryIds">addCurrentCategoryIds</a></li><li data-type="method" id="RequestBuilder-addCurrentCustomFields-nav"><a href="RequestBuilder.html#addCurrentCustomFields">addCurrentCustomFields</a></li><li data-type="method" id="RequestBuilder-addCurrentTags-nav"><a href="RequestBuilder.html#addCurrentTags">addCurrentTags</a></li><li data-type="method" id="RequestBuilder-addCurrentVariation-nav"><a href="RequestBuilder.html#addCurrentVariation">addCurrentVariation</a></li><li data-type="method" id="RequestBuilder-addCustomer-nav"><a href="RequestBuilder.html#addCustomer">addCustomer</a></li><li data-type="method" id="RequestBuilder-addElements-nav"><a href="RequestBuilder.html#addElements">addElements</a></li><li data-type="method" id="RequestBuilder-addExternalVisitRef-nav"><a href="RequestBuilder.html#addExternalVisitRef">addExternalVisitRef</a></li><li data-type="method" id="RequestBuilder-addOrderData-nav"><a href="RequestBuilder.html#addOrderData">addOrderData</a></li><li data-type="method" id="RequestBuilder-load-nav"><a href="RequestBuilder.html#load">load</a></li><li data-type="method" id="RequestBuilder-setCartContent-nav"><a href="RequestBuilder.html#setCartContent">setCartContent</a></li><li data-type="method" id="RequestBuilder-setCoupon-nav"><a href="RequestBuilder.html#setCoupon">setCoupon</a></li><li data-type="method" id="RequestBuilder-setCurrentPriceFrom-nav"><a href="RequestBuilder.html#setCurrentPriceFrom">setCurrentPriceFrom</a></li><li data-type="method" id="RequestBuilder-setCurrentPriceTo-nav"><a href="RequestBuilder.html#setCurrentPriceTo">setCurrentPriceTo</a></li><li data-type="method" id="RequestBuilder-setCustomer-nav"><a href="RequestBuilder.html#setCustomer">setCustomer</a></li><li data-type="method" id="RequestBuilder-setElements-nav"><a href="RequestBuilder.html#setElements">setElements</a></li><li data-type="method" id="RequestBuilder-setForcedSegments-nav"><a href="RequestBuilder.html#setForcedSegments">setForcedSegments</a></li><li data-type="method" id="RequestBuilder-setPageType-nav"><a href="RequestBuilder.html#setPageType">setPageType</a></li><li data-type="method" id="RequestBuilder-setProducts-nav"><a href="RequestBuilder.html#setProducts">setProducts</a></li><li data-type="method" id="RequestBuilder-setResponseMode-nav"><a href="RequestBuilder.html#setResponseMode">setResponseMode</a></li><li data-type="method" id="RequestBuilder-setRestoreLink-nav"><a href="RequestBuilder.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="RequestBuilder-setSegmentCodes-nav"><a href="RequestBuilder.html#setSegmentCodes">setSegmentCodes</a></li></ul></li><li id="Session-nav"><a href="Session.html">Session</a><ul class='methods'><li data-type="method" id="Session-addOrder-nav"><a href="Session.html#addOrder">addOrder</a></li><li data-type="method" id="Session-reportAddToCart-nav"><a href="Session.html#reportAddToCart">reportAddToCart</a></li><li data-type="method" id="Session-setCart-nav"><a href="Session.html#setCart">setCart</a></li><li data-type="method" id="Session-setCustomer-nav"><a href="Session.html#setCustomer">setCustomer</a></li><li data-type="method" id="Session-setExternalVisitRef-nav"><a href="Session.html#setExternalVisitRef">setExternalVisitRef</a></li><li data-type="method" id="Session-setResponseMode-nav"><a href="Session.html#setResponseMode">setResponseMode</a></li><li data-type="method" id="Session-setRestoreLink-nav"><a href="Session.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="Session-setVariation-nav"><a href="Session.html#setVariation">setVariation</a></li><li data-type="method" id="Session-viewCart-nav"><a href="Session.html#viewCart">viewCart</a></li><li data-type="method" id="Session-viewCategory-nav"><a href="Session.html#viewCategory">viewCategory</a></li><li data-type="method" id="Session-viewFrontPage-nav"><a href="Session.html#viewFrontPage">viewFrontPage</a></li><li data-type="method" id="Session-viewNotFound-nav"><a href="Session.html#viewNotFound">viewNotFound</a></li><li data-type="method" id="Session-viewOther-nav"><a href="Session.html#viewOther">viewOther</a></li><li data-type="method" id="Session-viewProduct-nav"><a href="Session.html#viewProduct">viewProduct</a></li><li data-type="method" id="Session-viewSearch-nav"><a href="Session.html#viewSearch">viewSearch</a></li><li data-type="method" id="Session-viewTag-nav"><a href="Session.html#viewTag">viewTag</a></li></ul></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#nostojs">nostojs</a></li></ul>
+  </nav>
 
+  <div id="main">
+    
+      <h1 class="page-title">
+        Global
+      </h1>
+    
 
+    
 
 <section>
-
-<header>
+  <header>
     
-        <h2></h2>
+      <h2>
         
-    
-</header>
+        
+        
+      </h2>
 
-<article>
+      
+    
+  </header>
+
+  <article>
     <div class="container-overview">
-    
+      
         
 
         
-
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
         
-    
+      
     </div>
 
     
@@ -87,33 +151,39 @@
 
     
 
-    
+     
 
     
 
     
 
     
+      <h3 class="subsection-title">Methods</h3>
 
-    
-        <h3 class="subsection-title">Methods</h3>
-
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id="nostojs"><span class="type-signature"></span>nostojs<span class="signature">(callback)</span><span class="type-signature"></span></h4>
-    
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#nostojs">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="nostojs">
+      <span class="type-signature"></span>nostojs<span class="signature">(callback)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     In order to use the
-</div>
+  </div>
 
 
 
@@ -121,56 +191,59 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>callback</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      <a href="global.html#nosto">nosto</a>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#nosto">nosto</a></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the API callback function to be invoked</td>
-        </tr>
+        <td class="description last">
+          the API callback function to be invoked
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -178,37 +251,37 @@
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -224,34 +297,36 @@
 
 
 
-
-
-
-
-
-
-        
+      
     
 
     
-        <h3 class="subsection-title">Type Definitions</h3>
+      <h3 class="subsection-title">Type Definitions</h3>
 
-        
-                
-
-    
-
-    
-    <h4 class="name" id="nosto"><span class="type-signature"></span>nosto<span class="signature">(api)</span><span class="type-signature"></span></h4>
-    
-
-    
+      
+          
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#nosto">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="nosto">
+      <span class="type-signature"></span>nosto<span class="signature">(api)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     Callback for interacting with the instance of the current API.
-</div>
+  </div>
 
 
 
@@ -259,56 +334,59 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>api</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      <a href="Api.html">Api</a>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>api</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Api.html">Api</a></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -316,37 +394,37 @@
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -362,36 +440,27 @@
 
 
 
-
-
-
-
-
-
-            
-    
+        
 
     
-</article>
-
+  </article>
 </section>
 
 
 
 
-</div>
+  </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Action.html">Action</a></li><li><a href="ActionResponse.html">ActionResponse</a></li><li><a href="Api.html">Api</a></li><li><a href="RequestBuilder.html">RequestBuilder</a></li><li><a href="Session.html">Session</a></li></ul><h3>Global</h3><ul><li><a href="global.html#nostojs">nostojs</a></li></ul>
-</nav>
+  <br class="clear">
 
-<br class="clear">
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a>
+  </footer>
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sun Jul 26 2020 15:14:44 GMT+0300 (Eastern European Summer Time)
-</footer>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+  
+
 </body>
 </html>

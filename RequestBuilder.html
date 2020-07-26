@@ -1,47 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Class: RequestBuilder</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      RequestBuilder - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
 
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<div id="main">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-    <h1 class="page-title">Class: RequestBuilder</h1>
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Braintree SDK Client Reference
+    </h3>
 
     
 
+    <h3>Classes</h3><ul><li id="Action-nav"><a href="Action.html">Action</a><ul class='methods'><li data-type="method" id="Action-dumpData-nav"><a href="Action.html#dumpData">dumpData</a></li><li data-type="method" id="Action-setCategories-nav"><a href="Action.html#setCategories">setCategories</a></li><li data-type="method" id="Action-setCustomer-nav"><a href="Action.html#setCustomer">setCustomer</a></li><li data-type="method" id="Action-setCustomFields-nav"><a href="Action.html#setCustomFields">setCustomFields</a></li><li data-type="method" id="Action-setExternalVisitRef-nav"><a href="Action.html#setExternalVisitRef">setExternalVisitRef</a></li><li data-type="method" id="Action-setPageType-nav"><a href="Action.html#setPageType">setPageType</a></li><li data-type="method" id="Action-setPlacements-nav"><a href="Action.html#setPlacements">setPlacements</a></li><li data-type="method" id="Action-setProduct-nav"><a href="Action.html#setProduct">setProduct</a></li><li data-type="method" id="Action-setRef-nav"><a href="Action.html#setRef">setRef</a></li><li data-type="method" id="Action-setRestoreLink-nav"><a href="Action.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="Action-setSearchTerms-nav"><a href="Action.html#setSearchTerms">setSearchTerms</a></li><li data-type="method" id="Action-setTags-nav"><a href="Action.html#setTags">setTags</a></li><li data-type="method" id="Action-setVariation-nav"><a href="Action.html#setVariation">setVariation</a></li></ul></li><li id="ActionResponse-nav"><a href="ActionResponse.html">ActionResponse</a></li><li id="Api-nav"><a href="Api.html">Api</a><ul class='methods'><li data-type="method" id="Api-addSegmentCodeToVisit-nav"><a href="Api.html#addSegmentCodeToVisit">addSegmentCodeToVisit</a></li><li data-type="method" id="Api-createRecommendationRequest-nav"><a href="Api.html#createRecommendationRequest">createRecommendationRequest</a></li><li data-type="method" id="Api-customer-nav"><a href="Api.html#customer">customer</a></li><li data-type="method" id="Api-defaultSession-nav"><a href="Api.html#defaultSession">defaultSession</a></li><li data-type="method" id="Api-listen-nav"><a href="Api.html#listen">listen</a></li><li data-type="method" id="Api-loadRecommendations-nav"><a href="Api.html#loadRecommendations">loadRecommendations</a></li><li data-type="method" id="Api-pageTagging-nav"><a href="Api.html#pageTagging">pageTagging</a></li><li data-type="method" id="Api-recommendedProductAddedToCart-nav"><a href="Api.html#recommendedProductAddedToCart">recommendedProductAddedToCart</a></li><li data-type="method" id="Api-reportAddToCart-nav"><a href="Api.html#reportAddToCart">reportAddToCart</a></li><li data-type="method" id="Api-resendCartContent-nav"><a href="Api.html#resendCartContent">resendCartContent</a></li><li data-type="method" id="Api-resendCartTagging-nav"><a href="Api.html#resendCartTagging">resendCartTagging</a></li><li data-type="method" id="Api-resendCustomerTagging-nav"><a href="Api.html#resendCustomerTagging">resendCustomerTagging</a></li><li data-type="method" id="Api-sendTagging-nav"><a href="Api.html#sendTagging">sendTagging</a></li><li data-type="method" id="Api-setAutoLoad-nav"><a href="Api.html#setAutoLoad">setAutoLoad</a></li><li data-type="method" id="Api-setRecommendationsEnabled-nav"><a href="Api.html#setRecommendationsEnabled">setRecommendationsEnabled</a></li></ul></li><li id="RequestBuilder-nav"><a href="RequestBuilder.html">RequestBuilder</a><ul class='methods'><li data-type="method" id="RequestBuilder-addCurrentCategories-nav"><a href="RequestBuilder.html#addCurrentCategories">addCurrentCategories</a></li><li data-type="method" id="RequestBuilder-addCurrentCategoryIds-nav"><a href="RequestBuilder.html#addCurrentCategoryIds">addCurrentCategoryIds</a></li><li data-type="method" id="RequestBuilder-addCurrentCustomFields-nav"><a href="RequestBuilder.html#addCurrentCustomFields">addCurrentCustomFields</a></li><li data-type="method" id="RequestBuilder-addCurrentTags-nav"><a href="RequestBuilder.html#addCurrentTags">addCurrentTags</a></li><li data-type="method" id="RequestBuilder-addCurrentVariation-nav"><a href="RequestBuilder.html#addCurrentVariation">addCurrentVariation</a></li><li data-type="method" id="RequestBuilder-addCustomer-nav"><a href="RequestBuilder.html#addCustomer">addCustomer</a></li><li data-type="method" id="RequestBuilder-addElements-nav"><a href="RequestBuilder.html#addElements">addElements</a></li><li data-type="method" id="RequestBuilder-addExternalVisitRef-nav"><a href="RequestBuilder.html#addExternalVisitRef">addExternalVisitRef</a></li><li data-type="method" id="RequestBuilder-addOrderData-nav"><a href="RequestBuilder.html#addOrderData">addOrderData</a></li><li data-type="method" id="RequestBuilder-load-nav"><a href="RequestBuilder.html#load">load</a></li><li data-type="method" id="RequestBuilder-setCartContent-nav"><a href="RequestBuilder.html#setCartContent">setCartContent</a></li><li data-type="method" id="RequestBuilder-setCoupon-nav"><a href="RequestBuilder.html#setCoupon">setCoupon</a></li><li data-type="method" id="RequestBuilder-setCurrentPriceFrom-nav"><a href="RequestBuilder.html#setCurrentPriceFrom">setCurrentPriceFrom</a></li><li data-type="method" id="RequestBuilder-setCurrentPriceTo-nav"><a href="RequestBuilder.html#setCurrentPriceTo">setCurrentPriceTo</a></li><li data-type="method" id="RequestBuilder-setCustomer-nav"><a href="RequestBuilder.html#setCustomer">setCustomer</a></li><li data-type="method" id="RequestBuilder-setElements-nav"><a href="RequestBuilder.html#setElements">setElements</a></li><li data-type="method" id="RequestBuilder-setForcedSegments-nav"><a href="RequestBuilder.html#setForcedSegments">setForcedSegments</a></li><li data-type="method" id="RequestBuilder-setPageType-nav"><a href="RequestBuilder.html#setPageType">setPageType</a></li><li data-type="method" id="RequestBuilder-setProducts-nav"><a href="RequestBuilder.html#setProducts">setProducts</a></li><li data-type="method" id="RequestBuilder-setResponseMode-nav"><a href="RequestBuilder.html#setResponseMode">setResponseMode</a></li><li data-type="method" id="RequestBuilder-setRestoreLink-nav"><a href="RequestBuilder.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="RequestBuilder-setSegmentCodes-nav"><a href="RequestBuilder.html#setSegmentCodes">setSegmentCodes</a></li></ul></li><li id="Session-nav"><a href="Session.html">Session</a><ul class='methods'><li data-type="method" id="Session-addOrder-nav"><a href="Session.html#addOrder">addOrder</a></li><li data-type="method" id="Session-reportAddToCart-nav"><a href="Session.html#reportAddToCart">reportAddToCart</a></li><li data-type="method" id="Session-setCart-nav"><a href="Session.html#setCart">setCart</a></li><li data-type="method" id="Session-setCustomer-nav"><a href="Session.html#setCustomer">setCustomer</a></li><li data-type="method" id="Session-setExternalVisitRef-nav"><a href="Session.html#setExternalVisitRef">setExternalVisitRef</a></li><li data-type="method" id="Session-setResponseMode-nav"><a href="Session.html#setResponseMode">setResponseMode</a></li><li data-type="method" id="Session-setRestoreLink-nav"><a href="Session.html#setRestoreLink">setRestoreLink</a></li><li data-type="method" id="Session-setVariation-nav"><a href="Session.html#setVariation">setVariation</a></li><li data-type="method" id="Session-viewCart-nav"><a href="Session.html#viewCart">viewCart</a></li><li data-type="method" id="Session-viewCategory-nav"><a href="Session.html#viewCategory">viewCategory</a></li><li data-type="method" id="Session-viewFrontPage-nav"><a href="Session.html#viewFrontPage">viewFrontPage</a></li><li data-type="method" id="Session-viewNotFound-nav"><a href="Session.html#viewNotFound">viewNotFound</a></li><li data-type="method" id="Session-viewOther-nav"><a href="Session.html#viewOther">viewOther</a></li><li data-type="method" id="Session-viewProduct-nav"><a href="Session.html#viewProduct">viewProduct</a></li><li data-type="method" id="Session-viewSearch-nav"><a href="Session.html#viewSearch">viewSearch</a></li><li data-type="method" id="Session-viewTag-nav"><a href="Session.html#viewTag">viewTag</a></li></ul></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#nostojs">nostojs</a></li></ul>
+  </nav>
 
+  <div id="main">
+    
+      <h1 class="page-title">
+        RequestBuilder
+      </h1>
+    
 
+    
 
 <section>
-
-<header>
+  <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>RequestBuilder</h2>
+      <h2>
         
-    
-</header>
+        RequestBuilder
+        
+      </h2>
 
-<article>
+      
+    
+  </header>
+
+  <article>
     <div class="container-overview">
-    
+      
         
 
 
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#RequestBuilder">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="RequestBuilder">
+      <span class="type-signature"></span>new RequestBuilder<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
 
 
 
+  <div class="description">
+    Nosto's Javascript API to interacting with the content delivery service.
+  </div>
 
 
 
@@ -54,37 +136,37 @@
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -99,16 +181,16 @@
 
 
 
-
-
-
-
-
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#RequestBuilder-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="RequestBuilder-examples">Example</h5>
     
-    <pre class="prettyprint"><code>```js
-nostojs(api => {
+
+  <pre class="prettyprint"><code>nostojs(api => {
   api
     .createRecommendationRequest()
     .setResponseMode("JSON_ORIGINAL")
@@ -118,12 +200,13 @@ nostojs(api => {
     .then(response => {
       console.log(response);
     });
-});
-```</code></pre>
+});</code></pre>
 
 
+  </div>
 
-    
+
+      
     </div>
 
     
@@ -132,140 +215,40 @@ nostojs(api => {
 
     
 
-    
+     
 
     
 
     
 
     
+      <h3 class="subsection-title">Methods</h3>
 
-    
-        <h3 class="subsection-title">Methods</h3>
-
+      
         
-            
 
-    
 
-    
-    <h4 class="name" id="addCartItems"><span class="type-signature"></span>addCartItems<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
+  
 
-    
+  <span class='name-container'>
+    <a class="link-icon" href="#addCurrentCategories">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addCurrentCategories">
+      <span class="type-signature"></span>addCurrentCategories<span class="signature">(categories)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
 
+  
 
 
-<div class="description">
-    Adds the given identifiers of the products in the customer's shopping cart
-to the request.
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    the current request builder
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addCurrentCategories"><span class="type-signature"></span>addCurrentCategories<span class="signature">(categories)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the given category names to the request. Any category name specified here
-are simply added to the request.
-</div>
+are simply added to the request as personalisation filtering hints.
+  </div>
 
 
 
@@ -273,56 +256,59 @@ are simply added to the request.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>categories</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>categories</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the array of category ids</td>
-        </tr>
+        <td class="description last">
+          the array of category ids
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -330,37 +316,37 @@ are simply added to the request.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -376,51 +362,31 @@ are simply added to the request.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addCurrentCategoryIds">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addCurrentCategoryIds">
+      <span class="type-signature"></span>addCurrentCategoryIds<span class="signature">(categoryIds)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addCurrentCategoryIds"><span class="type-signature"></span>addCurrentCategoryIds<span class="signature">(categoryIds)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the given category ids to the request. Any category ids specified here
-are simply added to the request.
-</div>
+are simply added to the request as personalisation filtering hints.
+  </div>
 
 
 
@@ -428,56 +394,59 @@ are simply added to the request.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>categoryIds</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>categoryIds</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the array of category ids</td>
-        </tr>
+        <td class="description last">
+          the array of category ids
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -485,37 +454,37 @@ are simply added to the request.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -531,51 +500,31 @@ are simply added to the request.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addCurrentCustomFields">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addCurrentCustomFields">
+      <span class="type-signature"></span>addCurrentCustomFields<span class="signature">(fields)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addCurrentCustomFields"><span class="type-signature"></span>addCurrentCustomFields<span class="signature">(fields)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the given current custom fields to the request. Any custom fields
-specified here are simply added to the request.
-</div>
+specified here are simply added to the request as personalisation filtering hints.
+  </div>
 
 
 
@@ -583,56 +532,59 @@ specified here are simply added to the request.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fields</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>fields</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the array of fields</td>
-        </tr>
+        <td class="description last">
+          the array of fields
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -640,37 +592,37 @@ specified here are simply added to the request.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -686,51 +638,32 @@ specified here are simply added to the request.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addCurrentTags">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addCurrentTags">
+      <span class="type-signature"></span>addCurrentTags<span class="signature">(tags)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addCurrentTags"><span class="type-signature"></span>addCurrentTags<span class="signature">(tags)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the given current tags to the request. Any tags (tags1, tags12, or
-tags13) specified here are simply added to the request.
-</div>
+tags13) specified here are simply added to the request as personalisation
+filtering hints.
+  </div>
 
 
 
@@ -738,56 +671,59 @@ tags13) specified here are simply added to the request.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>tags</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>tags</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the array of tags</td>
-        </tr>
+        <td class="description last">
+          the array of tags
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -795,37 +731,37 @@ tags13) specified here are simply added to the request.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -841,52 +777,35 @@ tags13) specified here are simply added to the request.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addCurrentVariation">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addCurrentVariation">
+      <span class="type-signature"></span>addCurrentVariation<span class="signature">(variation)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addCurrentVariation"><span class="type-signature"></span>addCurrentVariation<span class="signature">(variation)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Sets the current variation identifier for the current request. This is an
-advanced API feature and should only be used when using multi-currency or
-the multi-variant features.
-</div>
+  <div class="description">
+    Sets the current variation identifier for the session. A variation identifier
+identifies the current currency (or the current customer group). If your site
+uses multi-currency, you must provide the ISO code current currency being viewed.
+<br/><br/>
+It is not recommended to pass the variation identifier to an request builder but
+instead leverage the tagging.
+  </div>
 
 
 
@@ -894,56 +813,59 @@ the multi-variant features.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>variation</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>variation</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the identifier of the current variation to fetch</td>
-        </tr>
+        <td class="description last">
+          the case-sensitive identifier of the current variation
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -951,37 +873,37 @@ the multi-variant features.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -997,50 +919,37 @@ the multi-variant features.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addCustomer">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addCustomer">
+      <span class="type-signature"></span>addCustomer<span class="signature">(customer)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addCustomer"><span class="type-signature"></span>addCustomer<span class="signature">(customer)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Adds the current customer's information to the current request.
-</div>
+  <div class="description">
+    Sets the information about the currently logged in customer. If the current
+customer is not provided, you will not be able to leverage features such as
+triggered emails. While it is recommended to always provide the details of
+the currently logged in customer, it may be omitted if there are concerns
+about privacy or compliance.
+<br/><br/>
+It is not recommended to pass the current customer details to the request
+builder but rather use the customer tagging.
+  </div>
 
 
 
@@ -1048,56 +957,59 @@ the multi-variant features.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>customer</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Customer
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>customer</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Customer</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1105,37 +1017,37 @@ the multi-variant features.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1151,51 +1063,31 @@ the multi-variant features.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addElements">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addElements">
+      <span class="type-signature"></span>addElements<span class="signature">(elements)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addElements"><span class="type-signature"></span>addElements<span class="signature">(elements)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the given elements (or placements) to the request. Any identifiers
 specified here are simply added to the elements already in the request.
-</div>
+  </div>
 
 
 
@@ -1203,56 +1095,59 @@ specified here are simply added to the elements already in the request.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>elements</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>elements</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the array of placements</td>
-        </tr>
+        <td class="description last">
+          the array of placements
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1260,37 +1155,37 @@ specified here are simply added to the elements already in the request.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1305,251 +1200,57 @@ specified here are simply added to the elements already in the request.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#addElements-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="addElements-examples">Example</h5>
+    
+  <p class="code-caption">
+    To load data for a single placement
+  </p>
 
 
-<h5>Returns:</h5>
+  <pre class="prettyprint"><code>nostojs(api => api
+  .createRecommendationRequest()
+  .addElements('bestseller-home')
+  .loadRecommendations());</code></pre>
 
+
+  </div>
+
+
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addEvent"><span class="type-signature"></span>addEvent<span class="signature">(type, target, ref)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Adds the given event to the current set of events. When viewing a product,
-it is required that you specify the "vp" as event and the product id as
-the target.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the type of the event e.g. vp for views and is for searches</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>target</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the target of the event e.g. the search query or the product id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>ref</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    the current request builder
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addExternalVisitRef"><span class="type-signature"></span>addExternalVisitRef<span class="signature">(reference)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Sets the external visit reference for the visit in order to merge sessions.
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addExternalVisitRef">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addExternalVisitRef">
+      <span class="type-signature"></span>addExternalVisitRef<span class="signature">(reference)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    Sets the external visit reference for the current session. An external visit
+reference is an external identifier provided by you which allows you to
+move the session between domains.
+<br/><br/>
 Incorrect usage of this method will result in sessions being merged
 incorrectly and may result in the termination of service.
-</div>
+  </div>
 
 
 
@@ -1557,56 +1258,59 @@ incorrectly and may result in the termination of service.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>reference</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>reference</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the external visit reference</td>
-        </tr>
+        <td class="description last">
+          the external visit reference
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1614,37 +1318,49 @@ incorrectly and may result in the termination of service.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
+  
+    <dt class="important tag-deprecated">Deprecated:</dt>
     
+        <dd>
+          <ul class="dummy">
+            <li>
+              as this is often implemented incorrectly leading to polluted data
+            </li>
+          </ul>
+        </dd>
+      
+    <br>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1660,51 +1376,31 @@ incorrectly and may result in the termination of service.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addOrderData">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addOrderData">
+      <span class="type-signature"></span>addOrderData<span class="signature">(order)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addOrderData"><span class="type-signature"></span>addOrderData<span class="signature">(order)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the order object to the current request. This should be invoked only
 on the order confirmation page.
-</div>
+  </div>
 
 
 
@@ -1712,94 +1408,97 @@ on the order confirmation page.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>order</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Order
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>order</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Order</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the details of the order that was placed</td>
-        </tr>
+        <td class="description last">
+          the details of the order that was placed
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1815,148 +1514,30 @@ on the order confirmation page.
 
 
 
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    the current request builder
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="getEvents"><span class="type-signature"></span>getEvents<span class="signature">()</span><span class="type-signature"> &rarr; {Array.&lt;Array>}</span></h4>
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array.&lt;Array></span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#load">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="load">
+      <span class="type-signature"></span>load<span class="signature">(flags)</span><span class="type-signature"> &rarr; {Promise}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="load"><span class="type-signature"></span>load<span class="signature">(flags)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-    
-
-    
+  
 
 
 
-<div class="description">
-    Builds the request and invokes it via JSONP to load the recommendation
-and content data.
-</div>
+  <div class="description">
+    Builds the request and makes a request to Nosto.
+  </div>
 
 
 
@@ -1964,94 +1545,97 @@ and content data.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>flags</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Object
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>flags</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          an object containing additional flags
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2066,157 +1650,54 @@ and content data.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#load-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="load-examples">Example</h5>
+    
+  <p class="code-caption">
+    To load data for a single placement
+  </p>
 
 
-<h5>Returns:</h5>
+  <pre class="prettyprint"><code>nostojs(api => api
+  .createRecommendationRequest()
+  .addElements('bestseller-home')
+  .load())
+  .then((response) => console.log(response));</code></pre>
 
+
+  </div>
+
+
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#setCartContent">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCartContent">
+      <span class="type-signature"></span>setCartContent<span class="signature">(cart)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
+  
 
-    
 
 
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="loadRecommendations"><span class="type-signature"></span>loadRecommendations<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Legacy method used to reloading the recommendations. This method is a
-simple wrapper around the other load method.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li>{load}</li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setCartContent"><span class="type-signature"></span>setCartContent<span class="signature">(cart)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Adds the cart object to the current request. This should be preferably
 on every page load so as to keep the cart state as fresh as possible.
-</div>
+  </div>
 
 
 
@@ -2224,56 +1705,59 @@ on every page load so as to keep the cart state as fresh as possible.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>cart</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Cart
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>cart</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Cart</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the details of the current shopping basket</td>
-        </tr>
+        <td class="description last">
+          the details of the current shopping basket
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2281,37 +1765,37 @@ on every page load so as to keep the cart state as fresh as possible.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2327,24 +1811,24 @@ on every page load so as to keep the cart state as fresh as possible.
 
 
 
-
-
-
-
-
-
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id="setCoupon"><span class="type-signature"></span>setCoupon<span class="signature">(coupon)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span></h4>
-    
-
-    
 
 
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setCoupon">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCoupon">
+      <span class="type-signature"></span>setCoupon<span class="signature">(coupon)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
@@ -2354,54 +1838,59 @@ on every page load so as to keep the cart state as fresh as possible.
 
 
 
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>coupon</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Coupon
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>coupon</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Coupon</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2409,37 +1898,37 @@ on every page load so as to keep the cart state as fresh as possible.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2455,47 +1944,32 @@ on every page load so as to keep the cart state as fresh as possible.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="RequestBuilder.html">RequestBuilder</a></span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#setCurrentPriceFrom">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCurrentPriceFrom">
+      <span class="type-signature"></span>setCurrentPriceFrom<span class="signature">(value)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setCurrentPriceFrom"><span class="type-signature"></span>setCurrentPriceFrom<span class="signature">(value)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
+  
 
 
 
-<div class="description">
+  <div class="description">
     Sets the current lower price range to the request. Faceting needs to be
-enabled for the slot in order for this to function.
-</div>
+enabled for the slot in order for this to function. Any lower value
+specified here are simply added to the request as personalisation filtering hints.
+  </div>
 
 
 
@@ -2503,56 +1977,59 @@ enabled for the slot in order for this to function.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>value</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Number
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the lower range of the price</td>
-        </tr>
+        <td class="description last">
+          the lower range of the price
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2560,37 +2037,37 @@ enabled for the slot in order for this to function.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2606,51 +2083,32 @@ enabled for the slot in order for this to function.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setCurrentPriceTo">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCurrentPriceTo">
+      <span class="type-signature"></span>setCurrentPriceTo<span class="signature">(value)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setCurrentPriceTo"><span class="type-signature"></span>setCurrentPriceTo<span class="signature">(value)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the current upper price range to the request. Faceting needs to be
-enabled for the slot in order for this to function.
-</div>
+enabled for the slot in order for this to function. Any upper value
+specified here are simply added to the request as personalisation filtering hints.
+  </div>
 
 
 
@@ -2658,56 +2116,59 @@ enabled for the slot in order for this to function.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>value</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Number
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the upper range of the price</td>
-        </tr>
+        <td class="description last">
+          the upper range of the price
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2715,37 +2176,37 @@ enabled for the slot in order for this to function.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2761,44 +2222,37 @@ enabled for the slot in order for this to function.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setCustomer">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setCustomer">
+      <span class="type-signature"></span>setCustomer<span class="signature">(customer)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setCustomer"><span class="type-signature"></span>setCustomer<span class="signature">(customer)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span></h4>
-    
-
-    
+  <div class="description">
+    Sets the information about the currently logged in customer. If the current
+customer is not provided, you will not be able to leverage features such as
+triggered emails. While it is recommended to always provide the details of
+the currently logged in customer, it may be omitted if there are concerns
+about privacy or compliance.
+<br/><br/>
+It is not recommended to pass the current customer details to the request
+builder but rather use the customer tagging.
+  </div>
 
 
 
@@ -2806,58 +2260,59 @@ enabled for the slot in order for this to function.
 
 
 
-
-
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>customer</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Customer
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>customer</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Customer</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          the details of the currently logged in customer
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -2865,37 +2320,37 @@ enabled for the slot in order for this to function.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -2911,47 +2366,31 @@ enabled for the slot in order for this to function.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="RequestBuilder.html">RequestBuilder</a></span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#setElements">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setElements">
+      <span class="type-signature"></span>setElements<span class="signature">(elements)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setElements"><span class="type-signature"></span>setElements<span class="signature">(elements)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
+  
 
 
 
-<div class="description">
+  <div class="description">
     Sets the given elements (or placements) to the request. Any identifiers
 specified here override all elements already in the request.
-</div>
+  </div>
 
 
 
@@ -2959,56 +2398,59 @@ specified here override all elements already in the request.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>elements</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>elements</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the array of placements</td>
-        </tr>
+        <td class="description last">
+          the array of placements
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -3016,37 +2458,37 @@ specified here override all elements already in the request.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -3061,189 +2503,53 @@ specified here override all elements already in the request.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#setElements-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="setElements-examples">Example</h5>
+    
+  <p class="code-caption">
+    To load data for a single placement
+  </p>
 
 
-<h5>Returns:</h5>
+  <pre class="prettyprint"><code>nostojs(api => api
+  .createRecommendationRequest()
+  .setElements(['bestseller-home'])
+  .loadRecommendations());</code></pre>
 
+
+  </div>
+
+
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#setForcedSegments">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setForcedSegments">
+      <span class="type-signature"></span>setForcedSegments<span class="signature">(segments)</span><span class="type-signature"> &rarr; {Object}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
+  
 
-    
 
 
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setElements"><span class="type-signature"></span>setElements<span class="signature">(elements)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span></h4>
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>elements</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="RequestBuilder.html">RequestBuilder</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setForcedSegments"><span class="type-signature"></span>setForcedSegments<span class="signature">(segments)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the given list of forced segment identifiers to the current request. This
 method allows you explicitly associate the current customer with a segment.
-</div>
+  </div>
 
 
 
@@ -3251,56 +2557,59 @@ method allows you explicitly associate the current customer with a segment.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>segments</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>segments</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the list of force segment identifiers</td>
-        </tr>
+        <td class="description last">
+          the list of force segment identifiers
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -3308,37 +2617,37 @@ method allows you explicitly associate the current customer with a segment.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -3354,51 +2663,31 @@ method allows you explicitly associate the current customer with a segment.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setPageType">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setPageType">
+      <span class="type-signature"></span>setPageType<span class="signature">(pageType)</span><span class="type-signature"> &rarr; {Object}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setPageType"><span class="type-signature"></span>setPageType<span class="signature">(pageType)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
+  <div class="description">
     Sets the identifier of the current page type to the current request. The different
 page types are product, front, search, cart, order, category, notfound and other.
-</div>
+  </div>
 
 
 
@@ -3406,56 +2695,59 @@ page types are product, front, search, cart, order, category, notfound and other
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>pageType</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>pageType</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the current page type</td>
-        </tr>
+        <td class="description last">
+          the current page type
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -3463,37 +2755,37 @@ page types are product, front, search, cart, order, category, notfound and other
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -3509,44 +2801,24 @@ page types are product, front, search, cart, order, category, notfound and other
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
 
 
+  
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
+  <span class='name-container'>
+    <a class="link-icon" href="#setProducts">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setProducts">
+      <span class="type-signature"></span>setProducts<span class="signature">(products)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
 
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setProducts"><span class="type-signature"></span>setProducts<span class="signature">(products)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span></h4>
-    
-
-    
+  
 
 
 
@@ -3556,56 +2828,59 @@ page types are product, front, search, cart, order, category, notfound and other
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>products</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;Product>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>products</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Product></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -3613,37 +2888,37 @@ page types are product, front, search, cart, order, category, notfound and other
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -3659,44 +2934,28 @@ page types are product, front, search, cart, order, category, notfound and other
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="RequestBuilder.html">RequestBuilder</a></span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#setResponseMode">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setResponseMode">
+      <span class="type-signature"></span>setResponseMode<span class="signature">(mode)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setResponseMode"><span class="type-signature"></span>setResponseMode<span class="signature">(mode)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
+  
 
 
 
-<div class="description">
+  <div class="description">
     Sets the response mode for the current request. The response mode can be
 used to switch between HTML and JSON. Here is an exhaustive list of the
 response modes.
@@ -3718,7 +2977,7 @@ response modes.
 | JSON_400x400_SQUARE  | Raw JSON with 400x400px center squared images  |
 | JSON_750x750_SQUARE  | Raw JSON with 750x750px center squared images  |
 | JSON_ORIGINAL        | Raw JSON with the original untouched images    |
-</div>
+  </div>
 
 
 
@@ -3726,56 +2985,59 @@ response modes.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>mode</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      String
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last">the response mode to be used</td>
-        </tr>
+        <td class="description last">
+          the response mode to be used
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -3783,37 +3045,37 @@ response modes.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -3829,44 +3091,38 @@ response modes.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    the current request builder
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#setRestoreLink">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setRestoreLink">
+      <span class="type-signature"></span>setRestoreLink<span class="signature">(restoreLink)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setRestoreLink"><span class="type-signature"></span>setRestoreLink<span class="signature">(restoreLink)</span><span class="type-signature"> &rarr; {<a href="RequestBuilder.html">RequestBuilder</a>}</span></h4>
-    
-
-    
+  <div class="description">
+    Sets the restore link for the current session. Restore links can be leveraged
+in email campaigns. Restore links allow the the user to restore the cart
+contents in a single click.
+<br/><br/>
+Read more about
+<a href="https://help.nosto.com/en/articles/664692">how to leverage the restore cart link</a>
+<br/><br/>
+It is not recommended to pass the current restore link to the request
+builder but rather use the tagging approach.
+  </div>
 
 
 
@@ -3874,53 +3130,50 @@ response modes.
 
 
 
-
-
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>restoreLink</code></td>
+        
 
-        <tr>
-            
-                <td class="name"><code>restoreLink</code></td>
-            
+        <td class="type">
+          
+        </td>
 
-            <td class="type">
-            
-            </td>
+        
 
-            
+        
 
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -3928,37 +3181,37 @@ response modes.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -3974,46 +3227,31 @@ response modes.
 
 
 
-
-<h5>Returns:</h5>
-
+      
         
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="RequestBuilder.html">RequestBuilder</a></span>
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#setSegmentCodes">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="setSegmentCodes">
+      <span class="type-signature"></span>setSegmentCodes<span class="signature">(segments)</span><span class="type-signature"> &rarr; {Object}</span>
+    </h4>
+  </span>
 
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setSegmentCodes"><span class="type-signature"></span>setSegmentCodes<span class="signature">(segmentCodes)</span><span class="type-signature"></span></h4>
-    
-
-    
+  
 
 
 
-<div class="description">
-    Adds a list of manual/merchants' segment codes
-</div>
+  <div class="description">
+    Sets the given list of manual segment identifiers to the current request. This
+method allows you explicitly associate the current customer with a segment.
+  </div>
 
 
 
@@ -4021,56 +3259,59 @@ response modes.
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>segments</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;String>
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>segmentCodes</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
+        <td class="description last">
+          the list of force segment identifiers
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -4078,37 +3319,37 @@ response modes.
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -4124,192 +3365,30 @@ response modes.
 
 
 
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setSortOrder"><span class="type-signature"></span>setSortOrder<span class="signature">(sortOrder)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Sets the identifier of the current sort order to the current request.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sortOrder</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">sortOrder the current sort order</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
+      
     
 
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    the current request builder
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
+  </article>
 </section>
 
 
 
 
-</div>
+  </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Action.html">Action</a></li><li><a href="ActionResponse.html">ActionResponse</a></li><li><a href="Api.html">Api</a></li><li><a href="RequestBuilder.html">RequestBuilder</a></li><li><a href="Session.html">Session</a></li></ul><h3>Global</h3><ul><li><a href="global.html#nostojs">nostojs</a></li></ul>
-</nav>
+  <br class="clear">
 
-<br class="clear">
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a>
+  </footer>
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sun Jul 26 2020 15:14:44 GMT+0300 (Eastern European Summer Time)
-</footer>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+  
+
 </body>
 </html>
