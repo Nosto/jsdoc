@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: api/session/action.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: api/session/action.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import context from "../../context"
+import validate from "../validation/validation"
+import * as extract from "../../extract"
+import { VIEW_PRODUCT } from "../types"
+import ActionResponse from "./response"
+import { deepClone } from "../../utils/object"
+import internal from "../internal"
+
+/** *****************************************************************************
+ * Copyright (c) 2018 Nosto Solutions Ltd All Rights Reserved.
+ * &lt;p>
+ * This software is the confidential and proprietary information of
+ * Nosto Solutions Ltd ("Confidential Information"). You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the agreement you entered into with
+ * Nosto Solutions Ltd.
+ ***************************************************************************** */
+
+function enhanceProduct(product) {
+  if (typeof product === "string") {
+    return { product_id: product }
+  }
+  return product
+}
+
+/**
+ * @param logs
+ * @param data
+ * @param responseMode
+ * @constructor
+ */
+function Action(logs, data, responseMode) {
+  context.updateSiteUrl()
+  const refs = {}
+
+  this.setRef = (productId, reference) => {
+    refs[productId] = reference
+    return this
+  }
+
+  this.setProduct = product => {
+    return this.setProducts([product])
+  }
+
+  this.setProducts = products => {
+    // eslint-disable-next-line
+    data.products = products.map(enhanceProduct)
+    return this
+  }
+
+  this.setCart = cart => {
+    // eslint-disable-next-line
+    data.cart = cart
+    return this
+  }
+
+  this.setCustomer = customer => {
+    // eslint-disable-next-line
+    data.customer = customer
+    return this
+  }
+
+  this.setOrder = order => {
+    // eslint-disable-next-line
+    data.order = order
+    return this
+  }
+
+  this.setSearchTerms = searchTerms => {
+    // eslint-disable-next-line
+    data.search_terms = searchTerms
+    return this
+  }
+
+  this.setCategories = categories => {
+    // eslint-disable-next-line
+    data.categories = categories
+    return this
+  }
+
+  this.setTags = tags => {
+    // eslint-disable-next-line
+    data.tags = tags
+    return this
+  }
+
+  this.setCustomFields = customFields => {
+    // eslint-disable-next-line
+    data.customFields = customFields
+    return this
+  }
+
+  this.setVariation = variation => {
+    // eslint-disable-next-line
+    data.variation = variation
+    return this
+  }
+
+  this.setPlacements = placements => {
+    // filter out undefined, null elements from the array
+    // eslint-disable-next-line
+    data.elements = placements.filter(n => n)
+    return this
+  }
+
+  this.setExternalVisitRef = externalVisitRef => {
+    // eslint-disable-next-line
+    data.external_visit_ref = externalVisitRef
+    return this
+  }
+
+  this.setRestoreLink = restoreLink => {
+    // eslint-disable-next-line
+    data.restore_link = restoreLink
+    return this
+  }
+
+  this.setPageType = pageType => {
+    // eslint-disable-next-line
+    data.page_type = pageType
+    return this
+  }
+
+  /**
+   * @return {Object}
+   */
+  this.dumpData = () => {
+    return deepClone(data)
+  }
+
+  /**
+   * @todo the actual promise should be returned later
+   */
+  this.update = () => {
+    this.load({ metadata: true }).then(() => {
+      return data
+    })
+    return data
+  }
+
+  this.validate = () => {
+    const errors = validate(data)
+    if (errors &amp;&amp; Object.keys(errors).length !== 0) {
+      throw new Error("There are errors in your payload.")
+    }
+  }
+
+  // internal method exposed for testing
+  this.createRequest = () => {
+    const request = internal.createRecommendationRequest()
+    request.setResponseMode(responseMode)
+
+    const forcedSegments = extract.findForcedSegments()
+    request.populateFrom({
+      data,
+      forcedSegments
+    })
+
+    if (Object.keys(refs).length &amp;&amp; !context.mode.isPreview()) {
+      // add missing events
+      Object.keys(refs)
+        .filter(id => !request.getEvents().filter(ev => ev[1] === id).length)
+        .forEach(id => request.addEvent(VIEW_PRODUCT, id))
+      // set event attribution
+      request
+        .getEvents()
+        .filter(ev => ev.length === 2 &amp;&amp; refs[ev[1]])
+        .forEach(ev => ev.push(refs[ev[1]]))
+    }
+    return request
+  }
+
+  /**
+   * @param {Object} flags
+   * @return {Promise&lt;ActionResponse>}
+   */
+  this.load = flags => {
+    this.validate()
+    return this.createRequest()
+      .load(flags)
+      .then(response => {
+        return new ActionResponse(response, responseMode)
+      })
+  }
+}
+
+export default Action
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Action.html">Action</a></li><li><a href="ActionResponse.html">ActionResponse</a></li><li><a href="Api.html">Api</a></li><li><a href="Session.html">Session</a></li></ul><h3>Global</h3><ul><li><a href="global.html#enhanceProduct">enhanceProduct</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Fri Jul 24 2020 13:12:08 GMT+0300 (Eastern European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
