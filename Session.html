@@ -339,6 +339,46 @@ action in order for the request to be made.
 
 
 
+  <div class="example-container">
+    <a class="link-icon" href="#addOrder-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="addOrder-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>nostojs(api => {
+  api.defaultSession()
+   .addOrder({
+     external_order_ref: "145000006",
+     info: {
+       order_number: "195",
+       email: "mridang@nosto.com",
+       first_name: "Mridang",
+       last_name: "Agarwalla",
+       type: "order",
+       newsletter: true
+     },
+     items: [{
+       product_id: "406",
+       sku_id: "243",
+       name: "Linen Blazer (White, S)",
+       quantity: 1,
+       unit_price: 455,
+       price_currency_code: "EUR"
+     }]
+   })
+   .setPlacements(["order-related"])
+   .load()
+   .then(data => {
+     console.log(data.recommendations);
+   })
+ })</code></pre>
+
+
+  </div>
+
 
       
         
@@ -678,7 +718,7 @@ partial content are not supported.
   })
   .viewCart()
   .setPlacements(["free-shipper"])
-  .load()
+  .update()
   .then(data => console.log(data)))</code></pre>
 
 
@@ -1621,7 +1661,7 @@ from the action.
       </svg>
     </a>
     <h4 class="name" id="viewCustomField">
-      <span class="type-signature"></span>viewCustomField<span class="signature">(tags)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
+      <span class="type-signature"></span>viewCustomField<span class="signature">(customFields)</span><span class="type-signature"> &rarr; {<a href="Action.html">Action</a>}</span>
     </h4>
   </span>
 
@@ -1630,7 +1670,7 @@ from the action.
 
 
   <div class="description">
-    Create a new action for a customField page. This should be used only on customField pages.
+    Create a new action with custom fields.
 <br/><br/>
 You must invoke the load method on the resultant
 action in order for the request to be made.
@@ -1670,14 +1710,14 @@ Note: tags are not case-sensitive.
     
       <tr>
         
-          <td class="name"><code>tags</code></td>
+          <td class="name"><code>customFields</code></td>
         
 
         <td class="type">
           
             
     <span class="param-type">
-      Array.&lt;String>
+      Object
     </span>
 
     
@@ -1691,7 +1731,7 @@ Note: tags are not case-sensitive.
         
 
         <td class="description last">
-          the set of the tags being viewed.
+          custom fields being viewed.
           
         </td>
       </tr>
@@ -1774,7 +1814,7 @@ Note: tags are not case-sensitive.
 
   <pre class="prettyprint"><code>nostojs(api => api
   .defaultSession()
-  .viewTag("colourful")
+  .viewCustomField({material: "cotton"})
   .load()
   .then(data => console.log(data)))</code></pre>
 
